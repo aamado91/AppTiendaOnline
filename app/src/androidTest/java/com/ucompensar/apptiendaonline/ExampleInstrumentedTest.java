@@ -1,4 +1,4 @@
-package com.ucompensar.tiendaonline;
+package com.ucompensar.apptiendaonline;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.ucompensar.tiendaonline", appContext.getPackageName());
+        assertEquals("com.ucompensar.apptiendaonline", appContext.getPackageName());
     }
 }

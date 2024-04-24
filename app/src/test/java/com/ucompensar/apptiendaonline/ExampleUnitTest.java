@@ -1,4 +1,4 @@
-package com.ucompensar.tiendaonline;
+package com.ucompensar.apptiendaonline;
 
 import org.junit.Test;
 
