@@ -15,10 +15,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logotienaonline" />
+        app:srcCompat="@drawable/online_store_logo" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/text_user"
         android:layout_width="310dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/text_password"
         android:layout_width="310dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
@@ -41,10 +41,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/text_user" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -55,5 +55,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/text_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>
