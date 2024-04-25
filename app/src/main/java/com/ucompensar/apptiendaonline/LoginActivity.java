@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin;
     EditText txtUser;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                if(txtUser.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")) {
                    Toast.makeText(getApplicationContext(), "Iniciando sesión ...",Toast.LENGTH_SHORT).show();
 
-                   Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                   Intent intent = new Intent(LoginActivity.this, InicioActivity.class);
                    startActivity(intent);
                }else{
                    Toast.makeText(getApplicationContext(), "Datos Invalidos ...",Toast.LENGTH_SHORT).show();
