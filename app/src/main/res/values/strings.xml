@@ -18,7 +18,9 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_registro_cliente">RegistroClienteActivity</string>
     <string name="correo_electronico">Correo electrónico</string>
-    <string name="contraena">Contraeña</string>
+    <string name="contrasena">Contraseña</string>
     <string name="nombre_completo_cliente">Nombre Completo</string>
     <string name="telefono">Teléfono</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="registrarme">Registrarme</string>
 </resources>
