@@ -13,6 +13,14 @@
         android:theme="@style/Base.Theme.AppTiendaOnline"
         tools:targetApi="34">
         <activity
+            android:name=".RegistroClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:exported="false"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Base.Theme.AppTiendaOnline.NoActionBar" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
