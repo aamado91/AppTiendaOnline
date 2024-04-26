@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
                if(txtUser.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")) {
                    Toast.makeText(getApplicationContext(), "Iniciando sesión ...",Toast.LENGTH_SHORT).show();
 
-                   //Intent intent = new Intent(LoginActivity.this, InicioActivity.class);
+                   //Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                    //startActivity(intent);
                }else{
                    Toast.makeText(getApplicationContext(), "Datos Invalidos ...",Toast.LENGTH_SHORT).show();

@@ -2,4 +2,7 @@
     <string name="app_name">AppTiendaOnline</string>
     <string name="app_user">Usuario</string>
     <string name="app_password">Contraseña</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

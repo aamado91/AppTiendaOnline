@@ -1,59 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4182ED"
+    android:background="@drawable/background"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="226dp"
-        android:layout_height="225dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/online_store_logo" />
+    <TextView
+        android:id="@+id/singin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tienda Online"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_margin="100dp"
+        android:gravity="center" />
 
     <EditText
         android:id="@+id/text_user"
-        android:layout_width="310dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/app_user"
-        android:inputType="text"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <EditText
-        android:id="@+id/text_password"
-        android:layout_width="310dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/app_password"
-        android:inputType="textPassword"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_user" />
-
-    <Button
-        android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/button_rounded"
+        android:layout_below="@id/singin"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="15dp"
+        android:hint="Correo Electronico"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_password"
+        android:layout_below="@id/text_user"
+        android:background="#30ffffff"
+        android:hint="Contraeña"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/baseline_password_24"
+        android:drawablePadding="15dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_password"
         android:text="Iniciar Sesión"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_password" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="Desarrollado por Anyelo Amado - Ucompensar 2024"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+</RelativeLayout>
