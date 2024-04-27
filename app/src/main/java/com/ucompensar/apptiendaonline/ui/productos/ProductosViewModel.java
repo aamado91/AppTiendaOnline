@@ -1,16 +1,16 @@
-package com.ucompensar.apptiendaonline.ui.home;
+package com.ucompensar.apptiendaonline.ui.productos;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class ProductosViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public ProductosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("Listado de productos");
     }
 
     public LiveData<String> getText() {

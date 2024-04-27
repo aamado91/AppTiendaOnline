@@ -1,4 +1,4 @@
-package com.ucompensar.apptiendaonline.ui.slideshow;
+package com.ucompensar.apptiendaonline.ui.compras;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ucompensar.apptiendaonline.databinding.FragmentSlideshowBinding;
+import com.ucompensar.apptiendaonline.databinding.FragmentComprasBinding;
 
-public class SlideshowFragment extends Fragment {
+public class ComprasFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentComprasBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        ComprasViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(ComprasViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentComprasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
+        final TextView textView = binding.textCompras;
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

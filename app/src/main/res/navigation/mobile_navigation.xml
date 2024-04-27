@@ -3,23 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_productos">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.ucompensar.apptiendaonline.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_productos"
+        android:name="com.ucompensar.apptiendaonline.ui.productos.ProductosFragment"
+        android:label="@string/menu_productos"
+        tools:layout="@layout/fragment_productos" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.ucompensar.apptiendaonline.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.ucompensar.apptiendaonline.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_compras"
+        android:name="com.ucompensar.apptiendaonline.ui.compras.ComprasFragment"
+        android:label="@string/menu_compras"
+        tools:layout="@layout/fragment_compras" />
 </navigation>

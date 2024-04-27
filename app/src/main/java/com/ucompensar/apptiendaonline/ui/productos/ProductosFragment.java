@@ -1,4 +1,4 @@
-package com.ucompensar.apptiendaonline.ui.gallery;
+package com.ucompensar.apptiendaonline.ui.productos;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,22 +9,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import com.ucompensar.apptiendaonline.databinding.FragmentProductosBinding;
 
-import com.ucompensar.apptiendaonline.databinding.FragmentGalleryBinding;
+public class ProductosFragment extends Fragment {
 
-public class GalleryFragment extends Fragment {
-
-    private FragmentGalleryBinding binding;
+    private FragmentProductosBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        ProductosViewModel galleryViewModel =
+                new ViewModelProvider(this).get(ProductosViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentProductosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
+        final TextView textView = binding.textProductos;
         galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
