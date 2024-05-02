@@ -1,6 +1,7 @@
+**Proyecto Universidad Ucompensar - (DESARROLLO DE APLICACIONES MOVILES NATIVAS)**
 Diseño de App para carrito de compras
 
-Pantallas Implementadas
+**Fase 1:** Pantallas Implementadas
 
 - Login
 
@@ -15,4 +16,5 @@ Pantallas Implementadas
 ![image](https://github.com/aamado91/AppTiendaOnline/assets/115300130/c459c9c8-d8ea-47ad-93c1-9d45db020d5e)
 
 - Carrito de Compras
+
 ![image](https://github.com/aamado91/AppTiendaOnline/assets/115300130/00183701-721b-4e52-9626-9f35d0e07e76)
