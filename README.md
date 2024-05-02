@@ -1,6 +1,6 @@
 Diseño de App para carrito de compras
 
-Pantallas implementadas
+Pantallas Implementadas
 
 - Login
 
