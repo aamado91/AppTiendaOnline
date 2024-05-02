@@ -23,4 +23,7 @@
     <string name="telefono">Teléfono</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="registrarme">Registrarme</string>
+    <string name="title_activity_item_detail_host">ItemDetailHostActivity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
 </resources>

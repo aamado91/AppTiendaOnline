@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
            @Override
            public void  onClick(View view){
 
-               if(txtUser.getText().toString().equals("admin") && txtPassword.getText().toString().equals("admin")) {
+               if(txtUser.getText().toString().equals("aamado@ucompensar.edu.co") && txtPassword.getText().toString().equals("admin")) {
                    Toast.makeText(getApplicationContext(), "Iniciando sesión ...",Toast.LENGTH_SHORT).show();
 
                    Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
