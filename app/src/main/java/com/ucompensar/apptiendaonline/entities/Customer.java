@@ -1,12 +1,24 @@
 package com.ucompensar.apptiendaonline.entities;
 
-public class Customer {
+import android.database.Cursor;
 
+public class Customer {
     private Long Id;
     private String Name;
     private String Email;
     private String Phone;
     private String Password;
+
+    public Customer() {
+    }
+
+    public Customer(Cursor item) {
+        setId(item.getLong(0));
+        setName(item.getString(1));
+        setEmail(item.getString(2));
+        setPhone(item.getString(3));
+        setPassword(item.getString(4));
+    }
 
     public Long getId() {
         return Id;

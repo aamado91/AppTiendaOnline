@@ -2,6 +2,7 @@ package com.ucompensar.apptiendaonline.repositories;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
@@ -28,5 +29,18 @@ public class RepositoryCustomer extends RepositoryBase {
         id = db.insert(TABLE_CUSTOMERS, null, values);
 
         return id;
+    }
+
+    public Customer getCustomerByLogin(String email){
+
+        Customer customer = null;
+        SQLiteDatabase db = getReadable();
+        String strQuery = String.format("SELECT * FROM %s WHERE email = '%s'", TABLE_CUSTOMERS, email);
+        Cursor cursor = db.rawQuery(strQuery, null);
+
+        if (cursor.moveToFirst()){
+            customer = new Customer(cursor);
+        }
+        return customer;
     }
 }

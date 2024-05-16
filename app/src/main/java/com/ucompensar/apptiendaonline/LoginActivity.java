@@ -12,7 +12,10 @@ import android.widget.Toast;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.ucompensar.apptiendaonline.common.AppSesion;
 import com.ucompensar.apptiendaonline.db.DbHelper;
+import com.ucompensar.apptiendaonline.entities.Customer;
+import com.ucompensar.apptiendaonline.repositories.RepositoryCustomer;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -50,13 +53,23 @@ public class LoginActivity extends AppCompatActivity {
            @Override
            public void  onClick(View view){
 
-               if(txtUser.getText().toString().equals("aamado@ucompensar.edu.co") && txtPassword.getText().toString().equals("admin")) {
-                   Toast.makeText(getApplicationContext(), "Iniciando sesión ...",Toast.LENGTH_SHORT).show();
+               RepositoryCustomer repositoryCustomer = new RepositoryCustomer(LoginActivity.this);
+               Customer customer = repositoryCustomer.getCustomerByLogin(txtUser.getText().toString());
 
-                   Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
-                   startActivity(intent);
-               }else{
-                   Toast.makeText(getApplicationContext(), "Datos Invalidos ...",Toast.LENGTH_SHORT).show();
+               if (customer != null) {
+                    if (customer.getPassword().equals(txtPassword.getText().toString()) == false){
+                        Toast.makeText(getApplicationContext(), "Contraseña incorrecta",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        AppSesion.User = customer;
+                        Toast.makeText(getApplicationContext(), "Iniciando sesión ...",Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
+                        startActivity(intent);
+                    }
+               }
+               else {
+                   Toast.makeText(getApplicationContext(), "El usuario no existe",Toast.LENGTH_SHORT).show();
                }
            }
         });
