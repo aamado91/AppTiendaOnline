@@ -3,11 +3,12 @@ package com.ucompensar.apptiendaonline.entities;
 import android.database.Cursor;
 
 public class Customer {
-    private Long Id;
-    private String Name;
-    private String Email;
-    private String Phone;
-    private String Password;
+    private Long id;
+    private String name;
+    private int gender;
+    private String email;
+    private String phone;
+    private String password;
 
     public Customer() {
     }
@@ -15,48 +16,57 @@ public class Customer {
     public Customer(Cursor item) {
         setId(item.getLong(0));
         setName(item.getString(1));
+        //setGender(item.getInt(2));
         setEmail(item.getString(2));
         setPhone(item.getString(3));
         setPassword(item.getString(4));
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 }

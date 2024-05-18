@@ -9,8 +9,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.ucompensar.apptiendaonline.common.AppSesion;
 import com.ucompensar.apptiendaonline.entities.Customer;
 import com.ucompensar.apptiendaonline.repositories.RepositoryCustomer;
 
@@ -18,6 +20,7 @@ public class RegistroClienteActivity extends AppCompatActivity {
 
     Button btnCreate;
     EditText txtName;
+    RadioButton rbtGenderMen;
     EditText txtEmail;
     EditText txtPhone;
     EditText txtPassword;
@@ -32,6 +35,7 @@ public class RegistroClienteActivity extends AppCompatActivity {
 
         btnCreate = findViewById(R.id.button_crear_cliente);
         txtName = findViewById(R.id.text_nombre_completo);
+        rbtGenderMen = findViewById(R.id.radio_hombre);
         txtEmail = findViewById(R.id.text_correo);
         txtPhone = findViewById(R.id.text_telefono);
         txtPassword = findViewById(R.id.text_contrasena);
@@ -46,11 +50,19 @@ public class RegistroClienteActivity extends AppCompatActivity {
                 customer.setPhone(txtPhone.getText().toString());
                 customer.setPassword(txtPassword.getText().toString());
 
+                if (rbtGenderMen.isChecked())
+                    customer.setGender(1); //Men
+                else
+                    customer.setGender(0); //Women
+
                 RepositoryCustomer repositoryCustomer = new RepositoryCustomer(RegistroClienteActivity.this);
                 try {
                     customer.setId(repositoryCustomer.createCustomer(customer));
 
                     if (customer.getId() > 0){
+
+                        AppSesion.User = customer;
+
                         Toast.makeText(getApplicationContext(), String.format("%s, bienvenido!", customer.getName()),Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(RegistroClienteActivity.this, PrincipalActivity.class);
                         startActivity(intent);

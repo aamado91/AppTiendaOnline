@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -16,12 +17,17 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ucompensar.apptiendaonline.common.AppSesion;
 import com.ucompensar.apptiendaonline.databinding.ActivityPrincipalBinding;
 
 public class PrincipalActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityPrincipalBinding binding;
+
+    TextView textViewUserName;
+
+    TextView textViewEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +49,13 @@ public class PrincipalActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        View headerView = navigationView.getHeaderView(0);
+        textViewUserName = headerView.findViewById(R.id.textViewName);
+        textViewEmail = headerView.findViewById(R.id.textViewEmail);
+
+        textViewUserName.setText(AppSesion.User.getName());
+        textViewEmail.setText(AppSesion.User.getEmail());
     }
 
     @Override

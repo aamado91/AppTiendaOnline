@@ -36,11 +36,30 @@
         android:drawableLeft="@drawable/baseline_person_add_alt_1_24"
         android:drawablePadding="15dp" />
 
+    <RadioGroup
+        android:id="@+id/rb_sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/text_nombre_completo">
+        <RadioButton android:id="@+id/radio_hombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Hombre"/>
+        <RadioButton android:id="@+id/radio_mujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Mujer"/>
+    </RadioGroup>
+
     <EditText
         android:id="@+id/text_correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_nombre_completo"
+        android:layout_below="@id/rb_sexo"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -97,7 +116,6 @@
         android:layout_below="@+id/text_contrasena"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="86dp"
         android:layout_marginEnd="110dp"
         android:layout_marginBottom="110dp"
         android:backgroundTint="@color/design_default_color_primary_variant"

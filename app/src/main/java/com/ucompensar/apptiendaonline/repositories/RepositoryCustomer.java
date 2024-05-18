@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
+import androidx.compose.ui.platform.ValueElementSequence;
 
 import com.ucompensar.apptiendaonline.entities.Customer;
 
@@ -22,6 +23,7 @@ public class RepositoryCustomer extends RepositoryBase {
 
         ContentValues values = new ContentValues();
         values.put("name", customer.getName());
+        //values.put("gender", customer.getGender());
         values.put("email", customer.getEmail());
         values.put("phone", customer.getPhone());
         values.put("password", customer.getPassword());
