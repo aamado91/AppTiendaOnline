@@ -1,25 +1,18 @@
 package com.ucompensar.apptiendaonline.ui.compras;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.button.MaterialButton;
-import com.ucompensar.apptiendaonline.LoginActivity;
-import com.ucompensar.apptiendaonline.PrincipalActivity;
 import com.ucompensar.apptiendaonline.R;
-import com.ucompensar.apptiendaonline.databinding.FragmentComprasBinding;
-import com.ucompensar.apptiendaonline.ui.productos.Producto;
-import com.ucompensar.apptiendaonline.ui.productos.ProductosAdapter;
+import com.ucompensar.apptiendaonline.entities.Product;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -53,7 +46,7 @@ public class ComprasFragment extends Fragment {
     }
 
     private void cargarCarrito() {
-        Producto producto = new Producto("Teclado Logitech", "932999", "", R.drawable.teclado_logitech);
+        Product producto = new Product(1, "Teclado Logitech", "932999", "", R.drawable.teclado_logitech);
         listaProductosCarrito.add(new ProductoCarrito(producto, 2));
     }
 

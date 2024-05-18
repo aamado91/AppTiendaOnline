@@ -1,16 +1,29 @@
-package com.ucompensar.apptiendaonline.ui.productos;
+package com.ucompensar.apptiendaonline.entities;
 
-public class Producto {
+import android.database.Cursor;
+
+public class Product {
+
+    public long id;
     public String nombre;
     public String valor;
     public String estado;
     public int imagenId;
 
-    public Producto(String nombre, String valor, String estado, int imagenId) {
+    public Product(long id, String nombre, String valor, String estado, int imagenId) {
+        this.id = id;
         this.nombre = nombre;
         this.valor = valor;
         this.estado = estado;
         this.imagenId = imagenId;
+    }
+
+    public Product(Cursor item) {
+        this.id = item.getLong(0);
+        this.nombre = item.getString(1);
+        this.valor = item.getString(2);
+        this.estado = item.getString(3);
+        this.imagenId = item.getInt(4);
     }
 
     public String getNombre() {

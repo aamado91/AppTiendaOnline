@@ -7,13 +7,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ucompensar.apptiendaonline.R;
+import com.ucompensar.apptiendaonline.entities.Product;
 
 import java.util.List;
 
 public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ProductoViewHolder> {
-    private List<Producto> listaProductos;
+    private List<Product> listaProductos;
 
-    public ProductosAdapter(List<Producto> listaProductos){
+    public ProductosAdapter(List<Product> listaProductos){
         this.listaProductos = listaProductos;
     }
 
@@ -33,7 +34,7 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.Prod
         return listaProductos.size();
     }
 
-    public void serItems(List<Producto> productos){
+    public void serItems(List<Product> productos){
         this.listaProductos = productos;
     }
 
@@ -49,11 +50,11 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.Prod
             estadoProducto = itemVista.findViewById(R.id.estadoTextView);
         }
 
-        void bindData(final Producto producto){
-            iconoImagen.setImageResource(producto.getImagen());
-            nombreProducto.setText(producto.getNombre());
-            valorProducto.setText(producto.getValor());
-            estadoProducto.setText(producto.getEstado());
+        void bindData(final Product product){
+            iconoImagen.setImageResource(product.getImagen());
+            nombreProducto.setText(product.getNombre());
+            valorProducto.setText(product.getValor());
+            estadoProducto.setText(product.getEstado());
         }
     }
 }

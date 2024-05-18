@@ -1,24 +1,24 @@
 package com.ucompensar.apptiendaonline.ui.compras;
 
-import com.ucompensar.apptiendaonline.ui.productos.Producto;
+import com.ucompensar.apptiendaonline.entities.Product;
 
 public class ProductoCarrito {
 
-    public Producto producto;
+    public Product producto;
     public int cantidad;
     public int totalProducto;
 
-    public ProductoCarrito(Producto producto, int cantidad) {
+    public ProductoCarrito(Product producto, int cantidad) {
         this.producto = producto;
         this.cantidad = cantidad;
         this.totalProducto = Integer.parseInt(producto.getValor()) * cantidad;
     }
 
-    public Producto getProducto() {
+    public Product getProducto() {
         return producto;
     }
 
-    public void setProducto(Producto producto) {
+    public void setProducto(Product producto) {
         this.producto = producto;
     }
 
