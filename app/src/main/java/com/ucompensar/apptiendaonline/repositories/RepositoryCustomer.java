@@ -23,7 +23,7 @@ public class RepositoryCustomer extends RepositoryBase {
 
         ContentValues values = new ContentValues();
         values.put("name", customer.getName());
-        //values.put("gender", customer.getGender());
+        values.put("gender", customer.getGender());
         values.put("email", customer.getEmail());
         values.put("phone", customer.getPhone());
         values.put("password", customer.getPassword());

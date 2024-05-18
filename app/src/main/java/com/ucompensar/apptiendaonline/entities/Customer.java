@@ -16,10 +16,10 @@ public class Customer {
     public Customer(Cursor item) {
         setId(item.getLong(0));
         setName(item.getString(1));
-        //setGender(item.getInt(2));
-        setEmail(item.getString(2));
-        setPhone(item.getString(3));
-        setPassword(item.getString(4));
+        setGender(item.getInt(2));
+        setEmail(item.getString(3));
+        setPhone(item.getString(4));
+        setPassword(item.getString(5));
     }
 
     public Long getId() {

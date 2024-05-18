@@ -5,9 +5,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -25,6 +25,7 @@ public class PrincipalActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityPrincipalBinding binding;
 
+    ImageView imageViewUser;
     TextView textViewUserName;
 
     TextView textViewEmail;
@@ -53,9 +54,16 @@ public class PrincipalActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         textViewUserName = headerView.findViewById(R.id.textViewName);
         textViewEmail = headerView.findViewById(R.id.textViewEmail);
+        imageViewUser = headerView.findViewById(R.id.imageViewUser);
 
         textViewUserName.setText(AppSesion.User.getName());
         textViewEmail.setText(AppSesion.User.getEmail());
+
+        if (AppSesion.User.getGender() == 1) {
+            imageViewUser.setImageResource(R.drawable.user_men);
+        }else {
+            imageViewUser.setImageResource(R.drawable.user_women);
+        }
     }
 
     @Override

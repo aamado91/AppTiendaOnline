@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 2;
-    private static final String DATABASE_NAME = "online_store.db";
+    private static final String DATABASE_NAME = "online_store_2.db";
     public static final String TABLE_CUSTOMERS = "t_customers";
 
     public DbHelper(@Nullable Context context) {
@@ -19,7 +19,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Creation of tables
-        String strDdlTableCustomers = String.format("CREATE TABLE %s (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL, phone TEXT NOT NULL, password TEXT NOT NULL)", TABLE_CUSTOMERS);
+        String strDdlTableCustomers = String.format("CREATE TABLE %s (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, gender INTEGER NOT NULL, email TEXT NOT NULL, phone TEXT NOT NULL, password TEXT NOT NULL)", TABLE_CUSTOMERS);
 
         db.execSQL(strDdlTableCustomers);
     }
