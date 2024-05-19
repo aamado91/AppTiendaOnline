@@ -17,6 +17,9 @@
         android:theme="@style/Base.Theme.AppTiendaOnline"
         tools:targetApi="34">
         <activity
+            android:name=".ui.ubicacion.UbicacionActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.productos.ProductosGestionActivity"
             android:exported="false" />
         <activity
@@ -39,7 +42,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="paste api key here" />
+            android:value="AIzaSyDF6lsYkkXm_09_WrcR9Q4yXkvVTuBeuSM" />
     </application>
 
 </manifest>

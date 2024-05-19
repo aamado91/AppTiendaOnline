@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ucompensar.apptiendaonline.common.AppSesion;
 import com.ucompensar.apptiendaonline.databinding.ActivityPrincipalBinding;
 import com.ucompensar.apptiendaonline.ui.productos.ProductosGestionActivity;
+import com.ucompensar.apptiendaonline.ui.ubicacion.UbicacionActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -29,9 +30,9 @@ public class PrincipalActivity extends AppCompatActivity {
 
     ImageView imageViewUser;
     TextView textViewUserName;
-    Button btnAdminProducts;
     TextView textViewEmail;
-
+    Button btnAdminProducts;
+    Button btnMapa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +59,7 @@ public class PrincipalActivity extends AppCompatActivity {
         textViewEmail = headerView.findViewById(R.id.textViewEmail);
         imageViewUser = headerView.findViewById(R.id.imageViewUser);
         btnAdminProducts = headerView.findViewById(R.id.button_admin_products);
+        btnMapa = headerView.findViewById(R.id.button_showMap);
 
         textViewUserName.setText(AppSesion.User.getName());
         textViewEmail.setText(AppSesion.User.getEmail());
@@ -72,6 +74,14 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void  onClick(View view){
                 Intent intent = new Intent(PrincipalActivity.this, ProductosGestionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMapa.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void  onClick(View view){
+                Intent intent = new Intent(PrincipalActivity.this, UbicacionActivity.class);
                 startActivity(intent);
             }
         });
