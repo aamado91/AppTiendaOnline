@@ -11,15 +11,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="5dp">
 
         <ImageView
             android:id="@+id/iconoImageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/laptop_asus" />
+            android:layout_height="100dp"
+            android:src="@drawable/producto_base" />
 
         <TextView
             android:id="@+id/nombreTextView"

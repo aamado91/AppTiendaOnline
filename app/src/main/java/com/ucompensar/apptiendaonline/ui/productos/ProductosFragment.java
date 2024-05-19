@@ -42,12 +42,12 @@ public class ProductosFragment extends Fragment {
         try (RepositoryProducts repositoryProducts = new RepositoryProducts(getActivity().getApplicationContext())) {
             listProduct = repositoryProducts.getProducts();
 
-            listProduct.add(new Product(1,"Portatil ASUS", "$ 1.975.000", "Disponible", R.drawable.laptop_asus));
+            /*listProduct.add(new Product(1,"Portatil ASUS", "$ 1.975.000", "Disponible", R.drawable.laptop_asus));
             listProduct.add(new Product(2,"Pantalla LG 34 Pul.", "$ 2.455.000", "Disponible", R.drawable.monitor));
             listProduct.add(new Product(3,"Teclado Logitech", "$ 932.999", "Disponible", R.drawable.teclado_logitech));
             listProduct.add(new Product(4,"Audifonos Logitech", "$ 109.999", "Disponible", R.drawable.headphones_logitech));
             listProduct.add(new Product(5,"Mouse Logitech", "$ 150.000", "Disponible", R.drawable.mouse));
-            listProduct.add(new Product(6,"Disco Duro SSD", "$ 450.000", "Disponible", R.drawable.ssd));
+            listProduct.add(new Product(6,"Disco Duro SSD", "$ 450.000", "Disponible", R.drawable.ssd));*/
         }
     }
 
