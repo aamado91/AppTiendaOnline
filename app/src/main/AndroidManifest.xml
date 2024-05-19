@@ -13,11 +13,8 @@
         android:theme="@style/Base.Theme.AppTiendaOnline"
         tools:targetApi="34">
         <activity
-            android:name=".ItemDetailHostActivity"
-            android:exported="false"
-            android:label="@string/title_activity_item_detail_host"
-            android:resizeableActivity="true"
-            tools:targetApi="24" />
+            android:name=".ui.productos.ProductosGestionActivity"
+            android:exported="false" />
         <activity
             android:name=".RegistroClienteActivity"
             android:exported="false" />

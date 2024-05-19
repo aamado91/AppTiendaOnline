@@ -31,4 +31,16 @@
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_admin_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewEmail"
+        android:text="Administrar Productos"
+        android:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/blue"
+        android:drawableLeft="@drawable/baseline_all_inbox_24"
+        android:drawablePadding="15dp"/>
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.ucompensar.apptiendaonline;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -7,7 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Button;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -19,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ucompensar.apptiendaonline.common.AppSesion;
 import com.ucompensar.apptiendaonline.databinding.ActivityPrincipalBinding;
+import com.ucompensar.apptiendaonline.ui.productos.ProductosGestionActivity;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -27,7 +29,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     ImageView imageViewUser;
     TextView textViewUserName;
-
+    Button btnAdminProducts;
     TextView textViewEmail;
 
     @Override
@@ -55,6 +57,7 @@ public class PrincipalActivity extends AppCompatActivity {
         textViewUserName = headerView.findViewById(R.id.textViewName);
         textViewEmail = headerView.findViewById(R.id.textViewEmail);
         imageViewUser = headerView.findViewById(R.id.imageViewUser);
+        btnAdminProducts = headerView.findViewById(R.id.button_admin_products);
 
         textViewUserName.setText(AppSesion.User.getName());
         textViewEmail.setText(AppSesion.User.getEmail());
@@ -64,6 +67,14 @@ public class PrincipalActivity extends AppCompatActivity {
         }else {
             imageViewUser.setImageResource(R.drawable.user_women);
         }
+
+        btnAdminProducts.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void  onClick(View view){
+                Intent intent = new Intent(PrincipalActivity.this, ProductosGestionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

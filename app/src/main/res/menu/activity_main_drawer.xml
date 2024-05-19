@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_productos"
             android:icon="@drawable/baseline_dashboard_24"
-            android:title="Productos" />
+            android:title="Listar Productos" />
         <item
             android:id="@+id/nav_compras"
             android:icon="@drawable/baseline_shopping_cart_24"
