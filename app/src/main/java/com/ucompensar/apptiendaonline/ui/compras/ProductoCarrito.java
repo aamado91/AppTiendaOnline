@@ -11,7 +11,7 @@ public class ProductoCarrito {
     public ProductoCarrito(Product producto, int cantidad) {
         this.producto = producto;
         this.cantidad = cantidad;
-        this.totalProducto = Integer.parseInt(producto.getValor()) * cantidad;
+        this.totalProducto = Integer.parseInt(producto.getPrice()) * cantidad;
     }
 
     public Product getProducto() {

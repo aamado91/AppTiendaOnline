@@ -51,10 +51,10 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.Prod
         }
 
         void bindData(final Product product){
-            iconoImagen.setImageResource(product.getImagen());
-            nombreProducto.setText(product.getNombre());
-            valorProducto.setText(product.getValor());
-            estadoProducto.setText(product.getEstado());
+            iconoImagen.setImageResource(product.getImage());
+            nombreProducto.setText(product.getName());
+            valorProducto.setText(product.getPrice());
+            estadoProducto.setText(product.getState());
         }
     }
 }

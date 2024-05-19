@@ -3,13 +3,11 @@ package com.ucompensar.apptiendaonline.ui.compras;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ucompensar.apptiendaonline.R;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
@@ -58,11 +56,11 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.CompraVi
 
             Locale localizacion = new Locale ("es", "CO");
             NumberFormat formatoNumero = NumberFormat.getInstance (localizacion);
-            String strValorProducto = formatoNumero.format(Integer.parseInt(item.producto.getValor()));
-            String strValorTotalProducto = formatoNumero.format(Integer.parseInt(item.producto.getValor()) * item.cantidad);
+            String strValorProducto = formatoNumero.format(Integer.parseInt(item.producto.getPrice()));
+            String strValorTotalProducto = formatoNumero.format(Integer.parseInt(item.producto.getPrice()) * item.cantidad);
 
-            iconoImagen.setImageResource(item.producto.getImagen());
-            nombreProducto.setText(item.producto.getNombre());
+            iconoImagen.setImageResource(item.producto.getImage());
+            nombreProducto.setText(item.producto.getName());
             valorProducto.setText("$ " + strValorProducto);
             valorTotalProducto.setText("$ " + strValorTotalProducto);
             cantidadProducto.setText(String.valueOf(item.cantidad));
